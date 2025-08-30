@@ -389,8 +389,23 @@ class Autor_On_Focus_Shortcode {
                 font-family: var(--wd-text-font);
             }
             
-            /* Responsive Design */
+            /* Responsive Design - Two column grid on tablets */
+            @media (max-width: 1024px) {
+                .autor-on-focus-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+            }
+            
+            /* Mobile design - keep as list */
             @media (max-width: 768px) {
+                .autor-on-focus-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                
                 .autor-on-focus-title {
                     font-size: 28px;
                     margin-bottom: 30px;
